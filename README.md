@@ -22,7 +22,7 @@ You can download the created folders with the icons [here](https://github.com/Ky
     ```
     git clone https://github.com/Kyuyrii/Papirus-extra-folders.git && chmod +x Papirus-extra-folders/extra-folders-script.sh && mv Papirus-extra-folders/extra-folders* .
     ```
-3. Run the script:
+3. Run the script choosing the Papirus location (if you don't choose one, it will look for Papirus in /usr/share/icons):
     ```
     ./extra-folders-script.sh
     ```
