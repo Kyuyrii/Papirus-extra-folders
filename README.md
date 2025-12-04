@@ -18,13 +18,13 @@ You can download the created folders with the icons [here](https://github.com/Ky
     ```
     git clone https://github.com/PapirusDevelopmentTeam/papirus-folders.git && cd papirus-folders
     ```
-2. Download and extract the papirus-extra-folders-creator files to the papirus-folders folder
+2. Download the papirus-extra-folders files to the papirus-folders folder
     ```
-    wget https://github.com/Kyuyrii/papirus-extra-folders/releases/download/2025-06-30-creator/papirus-extra-folders-creator.tar.gz && tar -xvzf papirus-extra-folders-creator.tar.gz
+    git clone https://github.com/Kyuyrii/Papirus-extra-folders.git && chmod +x Papirus-extra-folders/extra-folders-script.sh && mv Papirus-extra-folders/extra-folders* .
     ```
 3. Run the script:
     ```
-    ./papirus-extra-folders-script.sh
+    ./extra-folders-script.sh
     ```
 
 # If you use Snap apps, install the Snap version of the Papirus icon theme and Papirus-Extra-Folders:
