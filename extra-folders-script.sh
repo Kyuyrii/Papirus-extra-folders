@@ -36,9 +36,13 @@ if [ ! -d "$ICONS_DIR/Papirus" ]; then
     exit 1
 fi
 
-# 2. Check for papirus-folders
-if ! command -v papirus-folders &> /dev/null; then
-    echo "Error: papirus-folders not found"
+# 2. Check for local papirus-folders
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PAPIRUS_FOLDERS="$SCRIPT_DIR/papirus-folders"
+
+if [ ! -x "$PAPIRUS_FOLDERS" ]; then
+    echo "Error: papirus-folders not found in script directory"
+    echo "Make sure papirus-folders is in the same folder as this script"
     exit 1
 fi
 
@@ -312,7 +316,7 @@ find "$ICONS_DIR" -maxdepth 1 -type d -name "Papirus-*" | while read theme_path;
 
     # 9. Apply papirus-folders only to main theme
     papirus_color=$(echo "$theme" | sed 's/Papirus-//' | tr '[:upper:]' '[:lower:]')
-    papirus-folders -C "$papirus_color" --theme "$theme" 2>/dev/null || true
+    ./papirus-folders -C "$papirus_color" --theme "$theme" 2>/dev/null || true
 done
 
 echo "Done! Papirus Extra Folders themes installed in $ICONS_DIR"
