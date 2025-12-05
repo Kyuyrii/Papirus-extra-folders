@@ -24,7 +24,7 @@ You can download the created folders with the icons [here](https://github.com/Ky
     ```
 3. Run the script choosing the Papirus location (if you don't choose one, it will look for Papirus in /usr/share/icons):
     ```
-    ./extra-folders-script.sh
+    ./extra-folders-script.sh --path $HOME/.local/share/icons/
     ```
 
 # If you use Snap apps, install the Snap version of the Papirus icon theme and Papirus-Extra-Folders:
